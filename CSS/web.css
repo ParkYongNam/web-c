@@ -91,6 +91,7 @@ a:hover {
 .container {
     width: 1200px;
     margin: 0 auto;
+    background-color: antiquewhite;
 }
 
 .h100 {
@@ -111,7 +112,13 @@ a:hover {
 }
 
 /*layout*/
+h1 {
+    text-align: center;
+}
+
 .d2ul {
+    position: absolute;
+    text-align: center;
     top: 100%;
     min-width: 110px;
     height: 0;
@@ -120,27 +127,52 @@ a:hover {
     z-index: 100000;
 }
 
+.d2ul>li {
+    margin-top: 1rem;
+}
+
+.d2ul li>a {
+    color: white;
+}
+
+.d2ul li:hover a {
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+
 .d1a {
     line-height: 100px;
     font-size: 1.8rem;
     padding: 0 2rem;
 }
 
-#gnb:hover .d2ul {
-    height: 150px;
+#gnb>li:hover {
+    background-color: black;
 }
 
+
+#gnb>li {
+    border: 1px solid white;
+    background-color: gray;
+}
+
+#gnb:hover>li>a {
+    color: white;
+}
+
+#gnb:hover .d2ul,
 #gnb:hover::after {
     height: 150px;
 }
 
-#gnb:hover::after {
+#gnb::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 100%;
-    background-color: red;
-    /* height: 0; */
+    background-color: black;
+    height: 0;
     transition: 0.5s;
 }
