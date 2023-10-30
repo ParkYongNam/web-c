@@ -162,11 +162,11 @@ h1 {
 }
 
 #gnb:hover .d2ul,
-#gnb:hover::after {
+#gnb>li:hover::before {
     height: 150px;
 }
 
-#gnb::after {
+#gnb>li::before {
     content: "";
     position: absolute;
     left: 0;
